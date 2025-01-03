@@ -1,30 +1,25 @@
 #!/bin/bash
 
-# Demande confirmation avant de continuer
-echo "ATTENTION: Ce script va réinitialiser les paramètres utilisateur et remettre les paquets système à leur état par défaut."
-read -p "Es-tu sûr de vouloir continuer ? (y/n): " confirmation
+# Message d'avertissement
+echo "ATTENTION: Ce script va effectuer des modifications importantes sur votre système."
+echo "Il supprimera certaines configurations et réinstallera des paquets système."
+echo "Assurez-vous d'avoir sauvegardé vos données importantes avant de continuer."
+
+# Demander une confirmation avant d'exécuter
+read -p "Êtes-vous sûr de vouloir continuer ? (y/n) : " confirmation
 if [[ "$confirmation" != "y" ]]; then
     echo "Annulation du processus."
     exit 1
 fi
 
-# Suppression des configurations utilisateurs
-echo "Suppression des configurations utilisateurs..."
-rm -rf ~/.config
-rm -rf ~/.local
-rm -rf ~/.cache
-echo "Configurations utilisateur supprimées."
+# Si la confirmation est "y", continuer l'exécution du script
+echo "Exécution du script en cours..."
 
-# Réinstallation des paquets système de base
-echo "Réinstallation des paquets système (ubuntu-desktop)..."
-sudo apt-get install --reinstall ubuntu-desktop -y
+# Ajouter ici les commandes que tu veux exécuter après la confirmation
+# Exemple : suppression des fichiers de configuration
+# rm -rf ~/.config ~/.local ~/.cache
 
-# Suppression des paquets inutiles et non installés
-echo "Suppression des paquets non nécessaires..."
-sudo apt-get purge $(dpkg --get-selections | grep -v deinstall | cut -f1) -y
+# Réinstaller des paquets ou toute autre commande
+# sudo apt-get install --reinstall ubuntu-desktop -y
 
-# Nettoyage des paquets inutiles
-echo "Nettoyage des paquets inutiles..."
-sudo apt-get autoremove -y
-
-echo "Réinitialisation terminée. Le système a été réinitialisé avec les paramètres par défaut."
+echo "Le script a été exécuté avec succès."

@@ -1,2 +1,4 @@
 # Astus-Cldgn6
-Comment Installer plus rapidement ça perdre du temps...
+Pour installer *All-App* plus rapidement sur ton système sans perdre de temps
+*Lit avant d'executer une commande* 
+

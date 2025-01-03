@@ -10,5 +10,7 @@ Pour cloner ce dépôt, suivez les étapes ci-dessous :
 2. Utilisez la commande suivante pour cloner le dépôt :
    ```sh
    git clone https://github.com/Cldng6/Astus-Cldgn6.git
-## Accédez au répertoire du dépôt cloné :
-   cd Astus-Cldgn6   
+3. Accédez au répertoire du dépôt cloné :
+   ```sh
+   cd Astus-Cldgn6
+

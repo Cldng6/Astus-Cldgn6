@@ -13,4 +13,10 @@ Pour cloner ce dépôt, suivez les étapes ci-dessous :
 3. Accédez au répertoire du dépôt cloné :
    ```sh
    cd Astus-Cldgn6
+4. Change les permissions pour rendre le script exécutable :
+   ```sh
+   chmod +x reset_ubuntu.sh
+5. Exécute le script:
+   ```sh
+   ./reset_ubuntu.sh
 
